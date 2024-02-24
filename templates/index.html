@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitorium</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>const apitoken = "{{ api_token }}"</script>
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Chitorium <img src="/static/chitorium.png" alt="logo" id="logo"></h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/community">Community</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <div>
+    <form action="/leetify" method="post" id="kk">
+        <div class="input-container">
+            <label for="link" id="lin">Link to player(leetify):</label>
+            <br>
+            <input type="text" name="link" id="link" placeholder="Enter link here...">
+        </div>
+        <div class="input-container">
+            <label for="rec" id="nmax">Max Nodes:</label>
+            <br>
+            <input type="number" name="rec" value="5" id="rec" placeholder="Enter max nodes...">
+        </div>
+        
+        <button type="submit" value="submit">Submit</button>
+        <button type="button" id="backtohome" onclick="location.reload()" hidden="true">Back to home.</button>
+        
+    </form>
+</div>
+    <img src="" alt="" id="plotimg" hidden>
+    <button type="button" id="share" onclick="addPost(document.getElementById('plotimg').src)" hidden>Share with the community!</button>
+    <img src="/static/loading.gif" alt="LOADING DONT TOUCH ANYTHING" id="loadinggif" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 25px;" hidden>
+    <input type="text" name="usern" id="usern" placeholder="Enter your username...">
+    <button type="button" id="lockin" onclick="lockUsername()">Lock in your username!</button>
+</body>
+</html>
+
+
+

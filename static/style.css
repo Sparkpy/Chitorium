@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+* {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    margin: 0px; 
+    height: 100%;
+    background-image: url("/static/shitter-modified.png");
+    overflow: visible;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 56px;
+}
+nav a {
+    display: inline-block;
+    color: #ddd;
+    text-decoration: none;
+}
+form {
+    color: white;
+    background-color: rgb(22, 31, 46);
+    padding:60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+input[type="text"], input[type="number"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+button {
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.loadinggif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+#plotimg {
+    border: 3px solid;
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    height: 674px;
+    width: 1300px;
+}
+#logo {
+    position: absolute; 
+    top: 7%; 
+    left: 43%; 
+    transform: translate(-50%, -50%); 
+    height: 130px;
+}
+#share{
+    margin-top: 50vh;
+}
+#lockin {
+    margin-top: 55vh;
+}
+@media only screen and (max-width: 1920px) {
+    #logo {
+        position: absolute; 
+        top: 7%; 
+        left: 40.5%; 
+        transform: translate(-50%, -50%); 
+        height: 130px;
+    }
+    #plotimg {
+        border: 3px solid;
+        position: absolute;
+        top: 60%;
+        left: 59%;
+        transform: translate(-50%, -50%);
+        border-radius: 25px;
+        height: 674px;
+        width: 1300px;
+    }
+}
