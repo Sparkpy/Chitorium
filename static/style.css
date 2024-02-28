@@ -11,20 +11,56 @@ body {
     overflow: visible;
 }
 header {
-    background-color: #4CAF50;
+    background-image: url("/static/waves.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     padding: 20px;
     text-align: center;
 }
+
 h1 {
     font-size: 56px;
 }
-nav a {
-    display: inline-block;
-    color: #ddd;
-    text-decoration: none;
+
+.header-title {
+    margin: 0 auto;
+    width: fit-content;
+    text-shadow: 2px 2px 2px black;
 }
-form {
+.header-image {
+    position: absolute;
+    left: calc(50% - 170px);
+    margin-top: -100px;
+    height: 130px;
+    width: auto;
+}
+
+#logo {
+    position: absolute; 
+    top: 7%; 
+    left: 40.5%; 
+    transform: translate(-50%, -50%); 
+    height: 130px;
+    filter: drop-shadow(3px 3px 0px black);
+}
+
+.header-nav {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.header-nav > a {
+    color: #ddd;
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+}
+
+.form {
     color: white;
     background-color: rgb(22, 31, 46);
     padding:60px;
@@ -34,20 +70,24 @@ form {
     transform: translate(-50%, -50%);
     border-radius: 25px;
 }
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], input[type="password"] {
     width: 300px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddd;
     font-size: 16px;
 }
 button {
-    margin-top: 15px;
+    margin-top: 10px;
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+button:hover {
+    background-color: #3a853d;
 }
 .loadinggif {
     position: absolute;
@@ -66,27 +106,17 @@ button {
     height: 674px;
     width: 1300px;
 }
-#logo {
-    position: absolute; 
-    top: 7%; 
-    left: 43%; 
-    transform: translate(-50%, -50%); 
-    height: 130px;
-}
 #share{
     margin-top: 50vh;
 }
+#loginUsername, #loginPassword {
+    margin-bottom: 20px;
+}
+
 #lockin {
     margin-top: 55vh;
 }
 @media only screen and (max-width: 1920px) {
-    #logo {
-        position: absolute; 
-        top: 7%; 
-        left: 40.5%; 
-        transform: translate(-50%, -50%); 
-        height: 130px;
-    }
     #plotimg {
         border: 3px solid;
         position: absolute;
