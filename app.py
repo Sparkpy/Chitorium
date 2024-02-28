@@ -13,9 +13,8 @@ import os
 import random
 import string
 import matplotlib.pyplot as plt
-from faker import Faker
 import bcrypt
-fake = Faker()
+
 def generate_random_filename():
     letters = string.ascii_lowercase
     random_string = ''.join(random.choice(letters) for _ in range(10))

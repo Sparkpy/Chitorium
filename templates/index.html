@@ -9,16 +9,23 @@
     <script src="/static/script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Chitorium <img src="/static/chitorium.png" alt="logo" id="logo"></h1>
+    <header class="header">
+        <div class="header-title">
+            <h1>Chitorium</h1>
+        </div>
+        <div class="header-image">
+            <img src="/static/chitorium.png" alt="logo" id="logo">
+        </div>
         <nav>
-            <a href="/">Home</a>
-            <a href="/community">Community</a>
-            <a href="/about">About</a>
+            <div class="header-nav">
+                <a href="/">Home</a>
+                <a href="/community">Community</a>
+                <a href="/about">About</a>
+            </div>
         </nav>
     </header>
     <div>
-    <form action="/leetify" method="post" id="kk">
+    <form action="/leetify" method="post" id="kk" class="form">
         <div class="input-container">
             <label for="link" id="lin">Link to player(leetify):</label>
             <br>
@@ -32,15 +39,14 @@
         
         <button type="submit" value="submit">Submit</button>
         <button type="button" id="backtohome" onclick="location.reload()" hidden="true">Back to home.</button>
-        
     </form>
-</div>
+    </div>
     <img src="" alt="" id="plotimg" hidden>
     <button type="button" id="share" onclick="addPost(document.getElementById('plotimg').src)" hidden>Share with the community!</button>
     <img src="/static/loading.gif" alt="LOADING DONT TOUCH ANYTHING" id="loadinggif" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 25px;" hidden>
     <div id="popupForm" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" class="login-form">
         <!-- Your login form content -->
-        <form id="loginForm">
+        <form id="loginForm" class="form">
             <div class="input-container">
                 <label for="loginUsername">Username:</label>
                 <br>
