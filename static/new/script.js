@@ -29,7 +29,6 @@ document.addEventListener('mousemove', (e) => {
     document.getElementById('kk').addEventListener('submit', function (event) {
         event.preventDefault();
         document.getElementById('backtohome').hidden=false;
-        document.getElementById('loadinggif').hidden = false;
         submitForm(sessionToken);
         if (!isDone) {
             // Get the form
@@ -92,13 +91,12 @@ function submitForm(sessionToken) {
         }
 
         // You can hide the loading gif or perform any other actions
-        document.getElementById('loadinggif').hidden = true;
+        
     })
     .catch(error => {
         console.error('Error:', error);
 
-        // Handle errors, hide loading gif or perform other actions
-        document.getElementById('loadinggif').hidden = true;
+        
     });
 }
 
@@ -189,6 +187,8 @@ function showPopupForm() {
         const usernameInput = document.getElementById("loginUsername");
         const passwordInput = document.getElementById("loginPassword");
         console.log(usernameInput.value, passwordInput.value);
+        const username = formData.get("loginUsername");
+        const password = formData.get("loginPassword");
 
         let endpoint;
         const isLoginForm = popupForm.classList.contains("login-form");

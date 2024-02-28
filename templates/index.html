@@ -38,8 +38,23 @@
     <img src="" alt="" id="plotimg" hidden>
     <button type="button" id="share" onclick="addPost(document.getElementById('plotimg').src)" hidden>Share with the community!</button>
     <img src="/static/loading.gif" alt="LOADING DONT TOUCH ANYTHING" id="loadinggif" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 25px;" hidden>
-    <input type="text" name="usern" id="usern" placeholder="Enter your username...">
-    <button type="button" id="lockin" onclick="lockUsername()">Lock in your username!</button>
+    <div id="popupForm" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" class="login-form">
+        <!-- Your login form content -->
+        <form id="loginForm">
+            <div class="input-container">
+                <label for="loginUsername">Username:</label>
+                <br>
+                <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter your username..." required>
+            </div>
+            <div class="input-container">
+                <label for="loginPassword">Password:</label>
+                <br>
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password..." required>
+            </div>
+            <button type="submit" id="loginbutton">Login</button>
+            <button type="button" id="ToggleButton"></button>
+        </form>
+    </div>
 </body>
 </html>
 
